@@ -27,20 +27,48 @@ function my_keydown(e)
 	keyPressed = e.keyCode;
 	console.log(keyPressed);
 
-		if((keyPressed >=97 && keyPressed<=122)|| (keyPressed >=65 && keyPressed<=90)){
-		aplhabetkey()
-		document.getElementById("d1").innerHTML="You pressed alphabet key"
-	elseif
+	if ((keyPressed >=97 && keyPressed<=122)|| (keyPressed >=65 && keyPressed<=90))
 	{
-		otherkey();
-		document.getElementById("d1").innerHTML="You pressed symbol or other key";
-	}	
-}
+	aplhabetkey();
+	document.getElementById("d1").innerHTML="You pressed alphabet key";
+	console.log("alphabet key");
+
+	}
+
+	if ((keyPressed>=48 && keyPressed<=57)) 
+    {
+        numberkey();
+        document.getElementById("d1").innerHTML="You pressed number key";
+        add();
+    }
+
+	if((keyPressed>=37 && keyPressed<=40))
+    {
+        arrowkey();
+        document.getElementById("d1").innerHTML="You pressed special key";
+        add();
+    }
+
+	if((keyPressed>=17 && keyPressed<=18) ||  (keyPressed==27))
+    {
+        specialkey();
+        document.getElementById("d1").innerHTML="You pressed special key";
+        add();
+    }
+
+	elseif
+    {
+        otherkey();
+        document.getElementById("d1").innerHTML="You pressed other or symbol key";
+        add();
+    }
+
+	
 }
 
 function aplhabetkey()
 {
-	img_image= "Aplkey.png";
+	img_image= "Alpkey.png";
 	add();
 }
 function numberkey()
@@ -60,7 +88,6 @@ function specialkey()
 }
 function otherkey()
 {
-	img_image="otherkey.png";
+	img_image="Okey.png";
 	add();
 }
-
