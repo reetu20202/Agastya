@@ -35,29 +35,28 @@ function my_keydown(e)
 
 	}
 
-	if ((keyPressed>=48 && keyPressed<=57)) 
+	else if ((keyPressed>=48 && keyPressed<=57)) 
     {
         numberkey();
         document.getElementById("d1").innerHTML="You pressed number key";
         add();
     }
 
-	if((keyPressed>=37 && keyPressed<=40))
+	else if((keyPressed>=37 && keyPressed<=40))
     {
         arrowkey();
-        document.getElementById("d1").innerHTML="You pressed special key";
+        document.getElementById("d1").innerHTML="You pressed arrow key";
         add();
     }
 
-	if((keyPressed>=17 && keyPressed<=18) ||  (keyPressed==27))
+	else if((keyPressed>=17 && keyPressed<=18) ||  (keyPressed==27))
     {
         specialkey();
         document.getElementById("d1").innerHTML="You pressed special key";
         add();
     }
-
-	elseif
-    {
+	
+	else {
         otherkey();
         document.getElementById("d1").innerHTML="You pressed other or symbol key";
         add();
